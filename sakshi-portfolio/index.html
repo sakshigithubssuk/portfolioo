@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sakshi Kumari · Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<nav><a class="logo" href="#" aria-label="Sakshi Kumari, back to top"><svg viewBox="0 0 64 64" aria-hidden="true">
+<defs><linearGradient id="gs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--a)"/><stop offset="1" style="stop-color:var(--b)"/></linearGradient></defs>
+<rect x="2" y="2" width="60" height="60" rx="19" fill="url(#gs)"/>
+<text x="32" y="43" text-anchor="middle" font-family="Bricolage Grotesque,system-ui,sans-serif" font-weight="800" font-size="30" letter-spacing="-2" fill="#fff">SK</text>
+<circle class="nuc" cx="51" cy="14" r="3.5" fill="var(--c)"/></svg></a><div><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+<h1>Sakshi Kumari</h1>
+<p>Software engineer at OpenText. I build semantic search and auto-classification in C++ for IDOL, and I design OpenTelemetry observability for AI agents. ECE graduate from NIT Patna, 9.44 GPA.</p>
+<div class="btns"><a class="btn p" href="#skills">Explore my skills</a><a class="btn" href="https://github.com/sakshigithubssuk">GitHub</a><a class="btn" href="https://linkedin.com/in/sakshi-kumari-87149b272">LinkedIn</a></div>
+</section>
+
+<section id="skills">
+<h2>Skills you can spin</h2>
+<p class="lead">Drag the globe to rotate it. Tap any skill to see where I have used it. Filter by area to light up one cluster.</p>
+<div class="chips" id="chips" role="group" aria-label="Filter skills"></div>
+<div class="sk">
+<div id="globe" role="img" aria-label="Interactive 3D globe of skills"><small>Drag to rotate, tap a skill</small></div>
+<div id="info" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="work">
+<h2>Experience</h2>
+<div class="tl">
+<article class="card tilt"><h3>OpenText · Software Engineer Intern</h3><div class="m">Bangalore · Jan 2026 – Jun 2026</div>
+<ul><li>Built Semantic Search and Semantic Auto-Classification for the IDOL platform in C++, giving intent-aware retrieval and automatic categorization at enterprise scale.</li><li>Designed embedding retrieval pipelines with Paraphrase Multilingual MiniLM, vector similarity search and K-Means++ clustering.</li><li>Sped up embedding generation and indexing with ONNX Runtime, batching, multithreading and memory-efficient streaming.</li></ul></article>
+<article class="card tilt"><h3>VaultofCodes · Frontend Developer Intern</h3><div class="m">Remote · Jun 2025 – Jul 2025</div>
+<ul><li>Built a Resume Builder that removes the need for LaTeX: live preview, multiple templates and high-quality PDF export.</li><li>Added grammar-aware suggestions and auto-formatting using the Mistral and LanguageTool APIs.</li></ul></article>
+<article class="card tilt"><h3>IIT BHU · Summer Research Intern</h3><div class="m">Varanasi · May 2024 – Jul 2024 · Photonics Group, Dr. Saumak Bhattacharya</div>
+<ul><li>Used machine learning to speed up the design of nanophotonic metasurfaces across several target frequencies under fabrication constraints.</li></ul></article>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="lead">Two agentic systems: one that lets people talk to enterprise data, and one that lets teams see inside an AI agent. Hover the cards to tilt them.</p>
+<div class="tl">
+<article class="card tilt proj"><div><span class="when">Jan 2026</span><h3>AI MCP Gateway</h3>
+<p class="tagline">Ask in plain English. Get answers from enterprise data, securely.</p>
+<ul><li>Users type a requirement in a Claude client and receive structured results from enterprise databases.</li><li>An MCP server orchestrates the agent: detects intent, runs the right tool, queries the database.</li><li>RAG grounds answers in internal and external knowledge; Okta OAuth validates every user.</li></ul>
+<span class="tag">MCP</span><span class="tag">Agentic orchestration</span><span class="tag">RAG</span><span class="tag">Okta OAuth</span><span class="tag">Claude</span></div>
+<svg class="dg" viewBox="0 0 560 240" role="img" aria-label="Flow: Claude client to Okta OAuth to MCP server, which fans out to intent detection, RAG and enterprise database">
+<path class="ln" d="M110 122H140M230 122H260M370 122C395 122 395 44 420 44M370 122H420M370 122C395 122 395 200 420 200"/>
+<rect class="nd" x="10" y="100" width="100" height="44" rx="12"/><text x="60" y="127">Claude client</text>
+<rect class="nd d" x="140" y="100" width="90" height="44" rx="12"/><text x="185" y="127">Okta OAuth</text>
+<rect class="nd b" x="260" y="82" width="110" height="80" rx="16"/><text x="315" y="118">MCP Server</text><text class="sm" x="315" y="137">orchestrator</text>
+<rect class="nd c" x="420" y="24" width="130" height="40" rx="12"/><text x="485" y="49">Intent detection</text>
+<rect class="nd c" x="420" y="102" width="130" height="40" rx="12"/><text x="485" y="127">RAG knowledge</text>
+<rect class="nd c" x="420" y="180" width="130" height="40" rx="12"/><text x="485" y="205">Enterprise DB</text>
+<circle class="pl" r="5"><animateMotion dur="2.6s" repeatCount="indefinite" path="M110 122H260"/></circle>
+<circle class="pl b" r="5"><animateMotion dur="2.6s" begin="1s" repeatCount="indefinite" path="M370 122C395 122 395 44 420 44"/></circle>
+<circle class="pl b" r="5"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" path="M370 122H420"/></circle>
+<circle class="pl d" r="5"><animateMotion dur="2.6s" begin="1.6s" repeatCount="indefinite" path="M370 122C395 122 395 200 420 200"/></circle>
+</svg></article>
+<article class="card tilt proj"><div><span class="when">Apr 2026</span><h3>AI Observability Framework</h3>
+<p class="tagline">See inside an AI agent: every request, token, tool call and failure.</p>
+<ul><li>A reusable OpenTelemetry framework for .NET with configurable instrumentation and OTLP exporters, ready to drop into enterprise apps.</li><li>Traces LLM requests, token usage, tool execution, latency, iterations and exceptions across agent workflows.</li><li>Live Grafana dashboards for monitoring and troubleshooting, following OpenTelemetry semantic conventions.</li></ul>
+<span class="tag">.NET</span><span class="tag">OpenTelemetry</span><span class="tag">OTLP</span><span class="tag">Grafana</span></div>
+<svg class="dg" viewBox="0 0 560 240" role="img" aria-label="Flow: .NET agent app to OpenTelemetry SDK to OTLP to Grafana dashboards">
+<path class="ln" d="M110 100H150M240 100H290M380 100H430"/>
+<rect class="nd" x="10" y="78" width="100" height="44" rx="12"/><text x="60" y="105">.NET agent</text>
+<rect class="nd b" x="150" y="78" width="90" height="44" rx="12"/><text x="195" y="105">OTel SDK</text>
+<rect class="nd c" x="290" y="78" width="90" height="44" rx="12"/><text x="335" y="105">OTLP export</text>
+<rect class="nd d" x="430" y="40" width="120" height="120" rx="16"/><text x="490" y="62">Grafana</text>
+<polyline class="spark" points="442,130 460,112 474,122 490,88 506,104 522,78 538,96"/>
+<circle class="pl" r="5"><animateMotion dur="2.2s" repeatCount="indefinite" path="M110 100H150"/></circle>
+<circle class="pl b" r="5"><animateMotion dur="2.2s" begin=".5s" repeatCount="indefinite" path="M240 100H290"/></circle>
+<circle class="pl d" r="5"><animateMotion dur="2.2s" begin="1s" repeatCount="indefinite" path="M380 100H430"/></circle>
+<text class="sm" x="280" y="176">Captured at every agent step</text>
+<g><rect class="nd" x="6" y="190" width="100" height="28" rx="14"/><text class="sm" x="56" y="208">LLM requests</text>
+<rect class="nd" x="114" y="190" width="100" height="28" rx="14"/><text class="sm" x="164" y="208">token usage</text>
+<rect class="nd" x="222" y="190" width="108" height="28" rx="14"/><text class="sm" x="276" y="208">tool execution</text>
+<rect class="nd" x="338" y="190" width="90" height="28" rx="14"/><text class="sm" x="383" y="208">latency</text>
+<rect class="nd" x="436" y="190" width="118" height="28" rx="14"/><text class="sm" x="495" y="208">exceptions</text></g>
+</svg></article>
+</div>
+</section>
+
+<section id="awards">
+<h2>Recognition</h2>
+<div class="ach">
+<div class="it"><i class="seal" style="--h:215">IIT<small>MADRAS</small></i><div><b>Gold Medal · 2026</b><span>NPTEL, IIT Madras: Business Intelligence and Analytics</span></div></div>
+<div class="it"><i class="seal" style="--h:150">IIT<small>ROPAR</small></i><div><b>Silver Medal · 2025</b><span>NPTEL, IIT Ropar: Deep Learning</span></div></div>
+<div class="it"><i class="seal" style="--h:215">IIT<small>MADRAS</small></i><div><b>Silver Medal · 2025</b><span>NPTEL, IIT Madras: The Joy of Computing using Python</span></div></div>
+<div class="it"><i class="seal" style="--h:30">DB<small>BHASKAR</small></i><div><b>Gold Medalist · 2019</b><span>Dainik Bhaskar Medhavi Chhatra: Academic Excellence</span></div></div>
+</div>
+</section>
+
+<footer id="contact"><h2>Let’s build something</h2>
+<div class="btns" style="justify-content:center"><a class="btn p" href="mailto:sakshissuk35@gmail.com">sakshissuk35@gmail.com</a><a class="btn" href="tel:+919631303455">+91 96313 03455</a></div></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
